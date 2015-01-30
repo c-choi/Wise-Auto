@@ -43,6 +43,15 @@ function initialize() {
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
       }
+function loadScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyBS9gLEHYzHRib-jN7lcTJQXtFc8YkwBeA&sensor=TRUE&callback=initialize";
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+
     </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -71,7 +80,9 @@ function initialize() {
       <div class="container-fluid">      
       <div class="col-md-6 col-sm-6">
           
-          <div class="well"><div id="map_canvas" style="width:100%; height:100%"></div></div>
+          <div class="well">
+          <div id="map-canvas"></div>
+          </div>
       </div>
       
       <div class="col-md-6 col-sm-6">
