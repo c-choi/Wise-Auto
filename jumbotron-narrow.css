@@ -95,7 +95,7 @@ map {
 }
 
 .well {
-  height: auto;
+  height: 350px;
 }
 
 a:hover, a:focus {
